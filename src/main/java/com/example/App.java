@@ -1,10 +1,7 @@
 package com.example;
 
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.Scanner;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 
 /**
