@@ -17,16 +17,10 @@ public class App
 
         TurdFuzz tf = new TurdFuzz(all_reads);
 
-        int charsum = tf.sumChars();
+        System.out.println("You entered " + tf.sumChars() + " amount of characters.");
 
-        System.out.println("You entered " + charsum + " amount of characters.");
+        System.out.println("You entered " + tf.sumWords() + " amount of words.");
 
-        int wordsum = tf.sumWords();
-
-        System.out.println("You entered " + wordsum + " amount of words.");
-
-        String longest = tf.longestWord();
-
-        System.out.println("You entered " + longest + " amount of words.");
+        System.out.println("You entered " + tf.longestWord() + " as longest word.");
     }
 }
