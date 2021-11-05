@@ -10,7 +10,8 @@ import org.junit.Test;
 public class TurdFuzzTest 
 {
     private ArrayList<String> al;
-    private TurdFuzz tf;
+    private TurdFuzz tfwithstrings;
+    private TurdFuzz tfwithempty;
     private String longest;
 
     public TurdFuzzTest()
@@ -22,24 +23,43 @@ public class TurdFuzzTest
         al.add("megastringe plus more");
         al.add("megastringe wit " + longest);
 
-        tf = new TurdFuzz(al);
+        tfwithstrings = new TurdFuzz(al);
+        tfwithempty = new TurdFuzz(new ArrayList<String>());
     }
 
     @Test
     public void testSumChars()
     {
-        assertEquals(71, tf.sumChars());
+        assertEquals(71, tfwithstrings.sumChars());
     }
     
     @Test
     public void testSumWords()
     {
-        assertEquals(7, tf.sumWords());
+        assertEquals(7, tfwithstrings.sumWords());
     }
 
     @Test
     public void testLongestWord()
     {
-        assertEquals(longest, tf.longestWord());
+        assertEquals(longest, tfwithstrings.longestWord());
+    }
+    
+    @Test
+    public void testSumCharsWithEmpty()
+    {
+        assertEquals(0, tfwithempty.sumChars());
+    }
+    
+    @Test
+    public void testSumWordsWithEmpty()
+    {
+        assertEquals(0, tfwithempty.sumWords());
+    }
+
+    @Test
+    public void testLongestWordWithEmpty()
+    {
+        assertEquals("", tfwithempty.longestWord());
     }
 }
