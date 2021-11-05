@@ -31,15 +31,15 @@ public class App
         }
         
         return words
-        .stream()
-        .reduce(
-            (longest, next) -> {
-                if (longest.length() > next.length()) 
-                    return longest; 
-                else 
-                    return next;
-            })
-        .orElse("");
+            .stream()
+            .reduce(
+                (longest, next) -> {
+                    if (longest.length() > next.length()) 
+                        return longest; 
+                    else 
+                        return next;
+                })
+            .orElse("");
 
     }
     public static void main( String[] args )
