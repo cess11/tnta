@@ -6,6 +6,6 @@ donE:
 
 TodO:
 1 tesTS!
-2. refacotrate text counting loggics in own Class
+2. refacotrate text counting loggics in own Class (DONE !)
 
 no help wanted but mayb needed ??!
